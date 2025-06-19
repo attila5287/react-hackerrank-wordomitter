@@ -1,21 +1,47 @@
-# React + TypeScript + Vite
+# [HackerRank React WOrd Omitter](https://www.hackerrank.com/challenges/react-word-omitter/problem)
+[step1 solution AT](./src/step1.md)
+[step2 solution AT](./src/step2.md)
+[vercel live version:](https://react-hackerrank-wordomitter.vercel.app/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![](./public/images/image1.jpg)
 
-While this project uses React, Vite supports many popular JS frameworks. [See all the supported frameworks](https://vitejs.dev/guide/#scaffolding-your-first-vite-project).
 
-## Deploy Your Own
 
-Deploy your own Vite project with Vercel.
+You are tasked with creating a simple React application called "Word Omitter" that dynamically filters out specific words from the user input in real-time. The application requirements are detailed below, and the finished application must pass all of the unit tests.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/vite-react&template=vite-react)
+## Detailed Requirements
 
-_Live Example: https://vite-react-example.vercel.app_
+The WordOmitter component takes an array of words to omit as a prop called omitWords. Each element of this array is a string representing a word that should be filtered out of the user's input.
 
-### Deploying From Your Terminal
+The application should display a text input field where the user can type a sentence.
 
-You can deploy your new Vite project with a single command from your terminal using [Vercel CLI](https://vercel.com/download):
+As the user types, the output area below the input field should display the sentence with the specified words omitted.
 
-```shell
-$ vercel
-```
+The application should have a toggle button to switch between omitting the specified words and showing all words.
+
+The application should have a clear button that clears both the input field and the output area.
+If the input field is empty, the output area should also be empty.
+
+
+## Sample Interaction
+
+### Initial State
+
+    The input field is empty.
+    The output area is empty.
+    The button displays "Show All Words" i.e. Omit Mode is enabled
+
+### User Action 1
+
+    User types "This is a test sentence." in the input field.
+    The output area displays "This is test sentence." (assuming "a" is omitted).
+
+### User Action 2
+
+    User clicks the toggle button.
+    The output area now displays "This is a test sentence." (showing all words).
+
+### User Action 3 
+    User clicks the clear button. - Both the input field and the output area are cleared.
+
+

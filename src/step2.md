@@ -1,3 +1,4 @@
+```JS
 import { useState } from "react";
 
 const App = () => {
@@ -37,44 +38,22 @@ const App = () => {
         placeholder="Type a sentence..."
       />
       <button onClick={() => setText("")}>Clear</button>
-      <h2 style={{ margin: 0 }}>
-        {omitMode ? filtered.join(" ") : words.join(" ")}
-      </h2>
-      <button onClick={() => setOmitMode(!omitMode)}>Toggle Mode</button>
+      <h2>{omitMode ? filtered.join(" ") : words.join(" ")}</h2>
+      <button onClick={() => setOmitMode(!omitMode)}>
+        Toggle Mode
+      </button>
       <button onClick={() => setText("this is a test sentence")}>Test</button>
-      <table
-        border={0}
-        style={{ borderCollapse: "collapse", marginTop: "20px" }}
-      >
-        <thead>
-          <tr>
-            <th>Currently Omitting Words</th>
-            <th>{omitMode ? "True" : "False"}</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Omitting Words</td>
-            <td>
-              <b>{omitWords.join(", ")}</b>
-            </td>
-          </tr>
-          <tr>
-            <td>Filtered</td>
-            <td>{filtered.join(" ")}</td>
-          </tr>
-          <tr>
-            <td>Omitted</td>
-            <td>{omitted.join(" ")}</td>
-          </tr>
-          <tr>
-            <td>Raw</td>
-            <td>{words.join(" ")}</td>
-          </tr>
-        </tbody>
-      </table>
+      <ul>
+        <li>Currently Omitting Words: {omitMode ? " True" : " False"}</li>
+        <li>Omitting Words:<b> {omitWords.join(", ")}</b></li>
+        <li>Filtered: {filtered.join(" ")}</li>
+        <li>Omitted: {omitted.join(" ")}</li>
+        <li>Raw: {words.join(" ")}</li>
+      </ul>
     </div>
   );
 };
 
 export default App;
+
+```
