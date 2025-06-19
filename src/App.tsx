@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./App.css";
 
 const App = () => {
   const [text, setText] = useState("this is a test sentence");
@@ -27,6 +28,11 @@ const App = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
+          <img
+            className="logo react"
+            src="/react.svg"
+            alt="React Logo"
+          />
           Word Omitter
         </a>
       </h1>
@@ -44,12 +50,12 @@ const App = () => {
       <button onClick={() => setText("this is a test sentence")}>Test</button>
       <table
         border={0}
-        style={{ borderCollapse: "collapse", marginTop: "20px" }}
+        style={{ borderCollapse: "collapse", marginTop: "20px", textAlign: "left" }}
       >
         <thead>
           <tr>
-            <th>Currently Omitting Words</th>
-            <th>{omitMode ? "True" : "False"}</th>
+            <th>Currently Omitting Words:</th>
+            <th><i style={{ color: "green" }}>{omitMode ? "True" : "False"}</i></th>
           </tr>
         </thead>
         <tbody>
